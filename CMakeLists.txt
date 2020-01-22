@@ -159,7 +159,23 @@ set(v1.0Definitions
     test.xml
     ualberta.xml
     )
-generateMavlink("1.0" "${v1.0Definitions}")
+set(v2.0Definitions
+    ASLUAV.xml
+    ardupilotmega.xml
+    autoquad.xml
+    common.xml
+    icarous.xml
+    matrixpilot.xml
+    minimal.xml
+    paparazzi.xml
+    python_array_test.xml
+    slugs.xml
+    standard.xml
+    test.xml
+    uAvionix.xml
+    ualberta.xml
+    )
+generateMavlink("2.0" "${v2.0Definitions}")
 
 # testing
 if (BUILD_TEST)
