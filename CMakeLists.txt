@@ -124,7 +124,7 @@ install(FILES ${CMAKE_BINARY_DIR}/config.h DESTINATION include/${PROJECT_NAME} C
 macro(generateMavlink version definitions)
     foreach(definition ${definitions})
         set(targetName ${definition}-v${version})
-        set(definitionAbsPath ${MAVLINK_SOURCE_DIR}/message_definitions/v${version}/${definition})
+        set(definitionAbsPath ${MAVLINK_SOURCE_DIR}/message_definitions/v1.0/${definition})
         message(STATUS "processing: ${definitionAbsPath}")
         add_custom_command( 
             OUTPUT ${targetName}-stamp
@@ -159,7 +159,7 @@ set(v1.0Definitions
     test.xml
     ualberta.xml
     )
-generateMavlink("1.0" "${v1.0Definitions}")
+generateMavlink("2.0" "${v1.0Definitions}")
 
 # testing
 if (BUILD_TEST)
